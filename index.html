@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Questionnaire</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    a.button {
+      background: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <a id="randomLink" class="button" href="#">Start Questionnaire</a>
+
+  <script>
+    const questionnaires = [
+      "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUM1RUNTROTFU5SjkyUDdCVVEyNDVQTk82RS4u",
+      "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUMFFTQ1FNSFNDNjNCU0JGOUczUkIxVzMzVy4u",
+      "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVURjNLSU5GNEtIQTRVTzFRRkQ0RERUWTlHRi4u",
+      "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUNjhZMElOQ0dGTUVOSDJMWkxBNjZIMVhZNy4u",
+      "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUN0M4NUVJUjk5Vk9KWk03Q1VNNE9YUUhNVi4u",
+      "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUOERGSkdPSFkzTTBISTNNQ1dMRUhPUVBSSi4u",
+      "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUMkhMVlNVQzVLQVY3SUZEMllFRFNFVUJFVS4u",    
+    ];
+
+    const randomURL = questionnaires[Math.floor(Math.random() * questionnaires.length)];
+    document.getElementById("randomLink").href = randomURL;
+  </script>
+</body>
+</html>

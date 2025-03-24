@@ -3,30 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Random Questionnaire</title>
+  <title>Interpretability and Explainability Survey</title>
   <style>
     body {
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: "Segoe UI", sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      padding: 0;
+      background: #f9f9f9;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
+
+    header {
+      margin-top: 2rem;
+    }
+
+    header img {
+      height: 80px;
+      margin: 0 1rem;
+      vertical-align: middle;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 2rem 1rem;
+      max-width: 90%;
+    }
+
     a.button {
-      background: #007bff;
+      background: #0077cc;
       color: white;
       padding: 1rem 2rem;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    a.button:hover {
+      background: #005fa3;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <a id="randomLink" class="button" href="#">Start Questionnaire</a>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Brunel_University_London_crest.svg/1200px-Brunel_University_London_crest.svg.png" alt="Brunel University Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/MHRA_logo.png" alt="MHRA Logo">
+  </header>
+
+  <main>
+    <h1>Interpretability and Explainability of AI in healthcare settings survey</h1>
+    <a id="randomLink" class="button" href="#">Start Questionnaire</a>
+  </main>
+
+  <footer>
+    © 2025 Brunel University London & MHRA
+  </footer>
 
   <script>
     const questionnaires = [
@@ -36,11 +80,12 @@
       "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUNjhZMElOQ0dGTUVOSDJMWkxBNjZIMVhZNy4u",
       "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUN0M4NUVJUjk5Vk9KWk03Q1VNNE9YUUhNVi4u",
       "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUOERGSkdPSFkzTTBISTNNQ1dMRUhPUVBSSi4u",
-      "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUMkhMVlNVQzVLQVY3SUZEMllFRFNFVUJFVS4u",    
+      "https://forms.office.com/Pages/ResponsePage.aspx?id=_oivH5ipW0yTySEKEdmlwkm-mZLhG5xBlUuqi_qJEDVUMkhMVlNVQzVLQVY3SUZEMllFRFNFVUJFVS4u"
     ];
 
     const randomURL = questionnaires[Math.floor(Math.random() * questionnaires.length)];
     document.getElementById("randomLink").href = randomURL;
   </script>
+
 </body>
 </html>

@@ -49,6 +49,12 @@
       background: #005fa3;
     }
 
+    p.notice {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
     footer {
       margin-top: 3rem;
       font-size: 0.8rem;
@@ -66,10 +72,11 @@
   <main>
     <h1>Interpretability and Explainability of AI in healthcare settings survey</h1>
     <a id="randomLink" class="button" href="#">Start Questionnaire</a>
+    <p class="notice">You will be redirected automatically in 5 seconds...</p>
   </main>
 
   <footer>
-    © 2025 Youssof Oskrochi, all rights reserved.
+    © 2025 Brunel University London & MHRA
   </footer>
 
   <script>
@@ -85,6 +92,11 @@
 
     const randomURL = questionnaires[Math.floor(Math.random() * questionnaires.length)];
     document.getElementById("randomLink").href = randomURL;
+
+    // Auto redirect after 5 seconds
+    setTimeout(() => {
+      window.location.href = randomURL;
+    }, 5000);
   </script>
 
 </body>
